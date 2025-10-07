@@ -1,0 +1,95 @@
+\usepackage{graphicx} % Required for inserting images
+\usepackage[top=25mm,bottom=25mm,right=25mm,left=35mm,head=12.5mm,foot=12.5mm]{geometry} %zarovnání
+\usepackage[backend=biber,style=apa, url=true,doi=true,eprint=true, isbn=true, hyperref = true]{biblatex}
+
+\addbibresource{references.bib}
+\setlength\bibitemsep{6pt}
+
+
+
+
+
+\usepackage[stretch=50]{microtype} %omezení krátkých slov na konci řádků, případně použít pevnou mezeru --> vypadá~takto
+
+
+\usepackage{fancyhdr} %fancy záhlaví a zápatí
+\pagestyle{fancy}
+
+\fancyhf{}  % Clear all header and footer fields
+\fancyfoot[C]{\thepage}  % center the page number in the footer
+\fancyhead[LE]{\leftmark} % Nadpis kapitoly vlevo na lichých stránkách
+\fancyhead[RO]{\rightmark} % Nadpis sekce vpravo na sudých stránkách
+
+\usepackage{titlesec} %úprava stylu nadpisů
+
+\usepackage{pdfpages} %vložení pdf
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{indentfirst}
+\usepackage{acronym}
+
+\usepackage{multirow} 
+
+\usepackage{tablefootnote}
+\usepackage{float}
+\usepackage{dcolumn}
+\usepackage{setspace}
+\usepackage{csquotes} 
+\usepackage{enumitem}
+\usepackage{bm}
+\usepackage{subfigure}
+\usepackage{listings}
+\usepackage[none]{hyphenat}
+\usepackage{pgfplots}
+\usepackage{caption}
+    \captionsetup{skip=2pt} 
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{forest}
+\usepackage{lettrine}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+\sloppy
+\usepackage{booktabs}
+\usepackage{adjustbox}
+
+\usepackage[title,toc,page]{appendix}
+
+
+\definecolor{modra}{RGB}{3, 76, 83}
+\definecolor{peach}{RGB}{243, 140, 121}
+
+%VŠE barvy
+\definecolor{vse}{RGB}{0, 159, 227}
+\definecolor{ffu}{RGB}{177, 0, 97}
+\definecolor{fmv}{RGB}{236, 102, 8}
+\definecolor{fph}{RGB}{0, 100, 156}
+\definecolor{fis}{RGB}{0, 153, 130}
+\definecolor{nf}{RGB}{91, 197, 242}
+\definecolor{fm}{RGB}{232, 48, 138}
+\definecolor{seda}{RGB}{74, 74, 73}
+
+
+\DeclareBibliographyDriver{legislation}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \addperiod\space%
+  \printtext[parens]{\printdate}%
+  \setunit{\labelnamepunct}\newblock
+  \printfield{title}%
+  \newunit\newblock
+  \printfield{number}%
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{finentry}%
+}
+
+\usepackage[hidelinks]{hyperref} %clickable links
+\hypersetup{pdftitle=Applied Macroeconomics I: Student Lecture Notes}
+\hypersetup{pdfauthor=Tomáš Haufer}
+\usepackage{nameref}
